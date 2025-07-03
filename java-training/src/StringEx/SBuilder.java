@@ -18,8 +18,8 @@ public class SBuilder {
         
         StringBuilder sb1 = new StringBuilder("Hello");
         for (int i = 0; i < 5; i++) {
-            sb.append(" "+i);  // Không tạo đối tượng mới, chỉ sửa đổi đối tượng hiện có
+            sb1.append(" "+i);  // Không tạo đối tượng mới, chỉ sửa đổi đối tượng hiện có
         }
-        System.out.println(sb);
+        System.out.println(sb1);
     }
 }

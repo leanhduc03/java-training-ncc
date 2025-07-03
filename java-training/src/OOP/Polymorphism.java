@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Polymorphism;
+package OOP;
 
 
 
@@ -22,9 +22,9 @@ class animal {
             System.out.println("This animal has four legs");
     }
 }
-public class chicken extends animal{
+public class Polymorphism extends animal{
 
-    public chicken() {
+    public Polymorphism() {
     }
     
     @Override    
@@ -33,7 +33,7 @@ public class chicken extends animal{
     }
     
     public static void main(String[] args) {
-        chicken c = new chicken();
+        Polymorphism c = new Polymorphism();
         c.weight(1, 2);
         c.weight(1, 2, 3);
         c.weight(1.5, 2.5);

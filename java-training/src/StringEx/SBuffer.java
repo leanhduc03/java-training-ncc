@@ -8,7 +8,7 @@ package StringEx;
  *
  * @author leanh
  */
-public class SB {
+public class SBuffer {
     public static void main(String[] args) {
         StringBuffer sb = new StringBuffer("Hello");
         System.out.println(sb);

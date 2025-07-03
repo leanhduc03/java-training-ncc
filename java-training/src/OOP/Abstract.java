@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package InterfaceAndAbstract;
+package OOP;
 
 /**
  *
@@ -23,7 +23,7 @@ interface iPerson {
      public void viewLastName();
  }
  
- class Employee extends Person implements iPerson {
+ class Abstract extends Person implements iPerson {
     String dob;
      
     @Override
@@ -36,13 +36,13 @@ interface iPerson {
         System.out.println("last name: " + lastname);  
     }
 
-    public Employee(String firstname, String lastname, String dob) {
+    public Abstract(String firstname, String lastname, String dob) {
         super(firstname, lastname);
         this.dob = dob;
     }
     
     public static void main(String[] args) {
-        Employee emp = new Employee("Nguyen", "Van A", "01/01/1990");
+        Abstract emp = new Abstract("Nguyen", "Van A", "01/01/1990");
         emp.viewFirstName();
         emp.viewLastName();
     }
