@@ -1,43 +1,17 @@
-package com.example.Management.entity;
+package com.example.Management.dto;
 
 import java.time.LocalDate;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Pattern;
 
-
-@Entity
-public class Employee {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class EmployeeUpdateDTO {
     private String fullName;
-
-    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
-            message = "Email phải đúng định dạng (ví dụ: example@gmail.com)")
     private String email;
     private String phone;
     private LocalDate birthDate;
     private String address;
     private String position;
-    private Boolean active = true;
-
-    public Long getId() {
-        return id;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private Long departmentId;
+    private String departmentName;
+    private Boolean active;
 
     public String getFullName() {
         return fullName;
@@ -63,6 +37,14 @@ public class Employee {
         this.phone = phone;
     }
 
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -79,6 +61,21 @@ public class Employee {
         this.position = position;
     }
 
+    public Long getDepartmentId() {
+        return departmentId;
+    }
+
+    public void setDepartmentId(Long departmentId) {
+        this.departmentId = departmentId;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
 
     public Boolean getActive() {
         return active;
