@@ -17,6 +17,7 @@ public class Employee {
     @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
             message = "Email phải đúng định dạng (ví dụ: example@gmail.com)")
     private String email;
+    private String password;
     private String phone;
     private LocalDate birthDate;
     private String address;
@@ -53,6 +54,14 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getPhone() {
